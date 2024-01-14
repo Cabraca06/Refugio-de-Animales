@@ -1,0 +1,376 @@
+body{
+    overflow-x: hidden;
+    background: #16A085;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+html{
+    overflow-x:hidden ;
+}
+
+h2{
+    color: #f3f3f3;
+}
+
+/*Inicio */
+.fondo{
+    width: 1430px;
+    margin-left: 5px;
+    padding:10px;
+}
+@media(max-width:768px){
+    .fondo{
+        width:350px;
+        padding: 5px;
+        margin-left: 0px;
+        
+    }
+}
+
+.contenedor{
+    display: flex;
+}
+
+.mision{
+    font-size: 15px;
+    margin-left: 10px;
+}
+@media(max-width:768px){
+    .mision{
+        font-size: 12px;
+    }
+}
+.vision{
+    font-size: 15px;
+    margin-right: 5px;
+}
+@media(max-width:768px){
+    .vision{
+        margin-right:5px;
+        font-size: 12px;
+    }
+   
+}
+
+
+
+/* menu de navegacion*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto:wght@300;400;900&family=Staatliches&display=swap');
+
+
+
+html{
+    font-size:62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    line-height:1.6 ;
+    font-family: 'roboto' sans-serif;
+    background-size: cover;
+}
+.logo{
+    width: 120px;
+    height: 25px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color:#212122;
+}
+
+.ham{
+    display:none;
+    cursor:pointer;
+    border:none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span{
+    display:block;
+    background-color:#f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.enlaces-menu{
+    display: flex;
+    padding:0;
+}
+
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #f3f3f3;
+    font-weight: 600;
+}
+
+.enlaces-menu li:hover{
+    background-color: rgb(62,130, 197);
+}
+
+/*DISPOSITIVOS MOVILES */
+
+@media(max-width:768px){
+        body{
+            overflow: hidden;
+        }
+        .logo{
+            padding-left:25px;
+        }
+        .ham{
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            transition: 0.2s 0.1s;
+        }
+        .ham:hover{
+            transform:rotate(360deg)
+        }
+       nav{
+           flex-direction: column;
+           align-items: flex-start;
+           padding: 25px 0;        
+       } 
+       .enlaces-menu{
+           flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
+           height:92vh;
+           margin: 0;
+           padding: 0;
+           width: 100%;
+            display: none;
+            opacity:0;
+       }
+       .enlaces-menu li{
+           width:100%;
+           text-align: center;
+           padding: 20px;
+       }
+}
+
+@keyframes muestraMenu{
+    from{opacity:0;}
+    to{opacity:1;}
+
+}
+
+.enlaces-menu.activado{
+    display: flex;
+    animation:muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+transform:rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado{
+    opacity: 0;
+}
+
+.br-3.animado{
+    transform:rotate(45deg) translate(-10px, -8px);
+}
+/* menu  de navegacion*/
+
+
+.contenedor-requisitos{
+    font-size: 15px;
+    margin-top: 100px;
+    display: flex;
+}
+.contenedor2{
+margin-left: 50px;
+}
+@media(max-width:768px){
+    .contenedor2{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+.photo img{
+    width: 400px;
+    margin-left:360px ;
+}
+@media(max-width:768px){
+    .photo img{
+        margin-left: 15px;
+        margin-right: 10px;
+        width: 180px;
+    }
+}
+
+
+.footer{
+    background-color: #212122;
+}
+.fa-whatsapp{
+    color: green;
+    margin-left: 10px;
+}
+.fa-facebook{
+    color: rgb(23, 23, 219);
+}
+
+
+
+
+
+/* colocacion de animales */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2rem;
+}
+
+
+.producto{
+    background-color: var(--primarioOscuro);
+    padding:1rem;
+   
+  }
+
+  .producto__imagen{
+    width:100%;
+  }
+
+
+
+  .producto__nombre{
+            font-size:4rem;
+  }
+
+  .producto__precio{
+    font-size:2.8rem;
+    color:var(--secundario)
+  } 
+
+  .producto__nombre,
+  .producto__precio{
+      font-family:var(--fuentePrincipal);
+      margin: 1rem 0;
+      text-align: center;
+  }
+
+/* colocacion de animales */
+
+/*Contacto*/
+.contact{
+    margin-left: 600px;
+    font-size: 30px;
+}
+@media(max-width:768px){
+    .contact{
+        margin-left: 40px;
+    }
+}
+
+
+.form{
+    width: 340px;
+    height: 440px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 40px  -10px #000;
+    margin: calc(44vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw -40px);
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+    position: relative;
+}
+.raya{
+margin: 10px 0;
+padding-bottom: 10px;
+width: 180px;
+color: grey;
+border-bottom: 3px  solid black ;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "montserrat", sans-serif;
+    border-bottom: 2px solid grey;
+}
+
+input:focus{
+    border-bottom: 2px solid lightblue;
+}
+
+p:before{
+    content:attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: gray;
+}
+
+button{
+    float:right ;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "montserrat", sans-serif;
+    border: 2px solid gray;
+    background: 0;
+    color: black;
+    cursor: pointer;
+    transition: all .3s;
+}
+button:hover{
+background: gray;
+color: white;
+}
+.formulario{
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: black;
+    color: white;
+    width: 320px;
+    padding: 10px 4px 10px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+    
+}
+/* contacto */
+
+.btn {
+    text-decoration: none;
+    font-size: 20px;
+   color: #000;
+   border-radius: 40px;
+}
+.btn:hover{
+    background-color: #e5eae9;
+}
