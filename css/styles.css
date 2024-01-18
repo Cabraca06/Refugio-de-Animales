@@ -1,12 +1,13 @@
 body{
     overflow-x: hidden;
     background: #16A085;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-html{
-    overflow-x:hidden ;
+    background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0;
+    margin: 0;
+    line-height:1.6 ;
+    font-family: 'roboto' sans-serif;
+    background-size: cover;
 }
 
 h2{
@@ -15,9 +16,10 @@ h2{
 
 /*Inicio */
 .fondo{
-    width: 1430px;
-    margin-left: 5px;
+    width: 100%;
+    margin-left: 0;
     padding:10px;
+    filter: contrast(100%) drop-shadow(5px 5px 5px);
 }
 @media(max-width:768px){
     .fondo{
@@ -64,6 +66,7 @@ h2{
 html{
     font-size:62.5%;
     box-sizing: border-box;
+    overflow-x:hidden;
 }
 
 *, *::before, *::after{
@@ -88,6 +91,7 @@ nav{
     justify-content: space-around;
     min-height: 8vh;
     background-color:#212122;
+    
 }
 
 .ham{
@@ -203,12 +207,12 @@ transform:rotate(-45deg) translate(-10px, 8px);
     display: flex;
 }
 .contenedor2{
-margin-left: 50px;
+    margin-left: 50px;
 }
 @media(max-width:768px){
     .contenedor2{
-        font-size: 12px;
-        margin-left: 10px;
+    font-size: 12px;
+    margin-left: 10px;
     }
 }
 .photo img{
@@ -226,6 +230,8 @@ margin-left: 50px;
 
 .footer{
     background-color: #212122;
+    display: flex;
+    justify-items: start;
 }
 .fa-whatsapp{
     color: green;
@@ -233,6 +239,7 @@ margin-left: 50px;
 }
 .fa-facebook{
     color: rgb(23, 23, 219);
+    padding-left: 10px;
 }
 
 
@@ -241,11 +248,34 @@ margin-left: 50px;
 
 /* colocacion de animales */
 
+.title2{
+   font-size: 30px;
+   text-align: center;
+   background-color: #e9f0ba;
+   color: #424040;
+}
+
+
+
 .grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:2rem;
+    gap:4.5rem;
 }
+@media (max-width:1000px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        } } 
+@media (max-width:500px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+
 
 
 .producto{
@@ -255,14 +285,22 @@ margin-left: 50px;
   }
 
   .producto__imagen{
-    width:100%;
+    width:430px;
+    height: 280px;
+    filter:drop-shadow(10px 10px 10px rgb(1, 1, 1, 0.5) );   
   }
 
 
 
   .producto__nombre{
             font-size:4rem;
+            color: #244232;
   }
+  .producto__nombre:hover{
+        background-color: #e9f0ba;
+  }
+
+
 
   .producto__precio{
     font-size:2.8rem;
@@ -304,11 +342,11 @@ margin-left: 50px;
     position: relative;
 }
 .raya{
-margin: 10px 0;
-padding-bottom: 10px;
-width: 180px;
-color: grey;
-border-bottom: 3px  solid black ;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    color: grey;
+    border-bottom: 3px  solid black ;
 }
 
 input{
@@ -327,7 +365,7 @@ input:focus{
     border-bottom: 2px solid lightblue;
 }
 
-p:before{
+.name:before{
     content:attr(type);
     display: block;
     margin: 28px 0 0;
@@ -347,8 +385,8 @@ button{
     transition: all .3s;
 }
 button:hover{
-background: gray;
-color: white;
+    background: gray;
+    color: white;
 }
 .formulario{
     position: absolute;
@@ -368,9 +406,14 @@ color: white;
 .btn {
     text-decoration: none;
     font-size: 20px;
-   color: #000;
-   border-radius: 40px;
+    color: #000;
+    border-radius: 40px;
 }
 .btn:hover{
     background-color: #e5eae9;
+}
+.autor{
+    color: #e4e4e4;
+    margin-left: 40%;
+    font-size: 15px;
 }

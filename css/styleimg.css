@@ -1,5 +1,107 @@
 
-img{
+/*img{
    margin-left: 400px;
    margin-top: 60px;
+}
+*/
+
+
+.text1{
+  padding: 15px;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+.text2{
+   font-size: 15px;
+   color: black;
+}
+
+.card1 img{
+   float: left;
+   padding-left: 10px;
+   width: 600px;
+   height: 420px;
+   filter: drop-shadow(10px 10px 10px);
+}
+ @media (max-width:1200px) {
+         .card1 img{
+            float: left;
+            width: 450px;
+            height: 300px;
+            padding: 5px;
+     
+         }
+         .parraf1{
+            font-size: 30px;
+            margin-left: 5%;
+         }
+   
+ }
+
+  
+.parraf1{
+   margin-left: 50%; 
+   padding-right: 10px;
+   font-size: 13.5px;
+}
+@media (max-width:903px) {
+         .parraf1{
+             font-size: 20px;
+             text-align: center;
+             margin:0;
+             ;
+         
+          }    
+          
+  }
+
+
+
+.cajon1  h2{
+   text-align: center; 
+}
+
+#bton{
+   font-size: 30px;
+   margin-left: 70%;
+   /*  margin-top: 100px;*/
+   color: rgb(144, 239, 36);
+   padding: 0;
+  background-color: rgb(240, 161, 59);
+  width: 100%;
+}
+#bton2{
+    font-size: 30px;
+   margin-right: 200px;
+    /*margin-bottom: 300px;*/
+   text-decoration: none;
+   color: rgb(144, 239, 36);
+   background-color: rgb(240, 161, 59);
+}
+.cajon1 a{
+   text-decoration: none;
+   padding: 0;
+}
+
+#bton,#bton2{
+   border-top-right-radius: 20px;
+   border-bottom-left-radius:20px ;
+   border-bottom-right-radius:20px;
+   border-top-left-radius:20px ;
+   
+}
+#bton:hover{
+   background-color: antiquewhite;
+   color: black;
+}
+
+#bton2:hover{
+background-color: antiquewhite;
+color: black;
+}
+
+.cajon2{
+   display: flex;
+   justify-content: space-between;
 }
